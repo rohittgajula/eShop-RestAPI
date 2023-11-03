@@ -1,0 +1,10 @@
+from django_filters import rest_framework as filters
+from .models import Order
+
+class OrdersFilter(filters.FilterSet):
+
+    class Meta:
+        model = Order
+        fields = ['id', 'status', 'payment_mode', 'payment_status']
+
+        
